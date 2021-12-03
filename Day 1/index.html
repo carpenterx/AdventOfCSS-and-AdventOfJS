@@ -13,29 +13,32 @@
 <body>
     <div class="content">
         <div class="ring">
-            <svg width="518" height="518" viewBox="0 0 518 518">
+            <svg id="green-circle" width="518" height="518" viewBox="0 0 518 518">
+                <circle stroke-width="9px" x="0" y="y" cx="259" cy="259" r="254" />
+            </svg>
+            <svg id="red-circle" class="hide" width="518" height="518" viewBox="0 0 518 518">
                 <circle stroke-width="9px" x="0" y="y" cx="259" cy="259" r="254" />
             </svg>
         </div>
         <div class="timer">
-            <!-- <p class="time">15:00</p> -->
             <div class="time">
                 <div class="time-text">
-                    <input id="minutes" type="text" value="15" disabled />
+                    <input id="minutes" type="text" value="15" oninput="CheckInput(this)" disabled />
                 </div>
                 <div class="time-text">:</div>
                 <div class="time-text">
-                    <input id="seconds" type="text" value="00" disabled />
+                    <input id="seconds" type="text" value="00" oninput="CheckInput(this)" disabled />
                 </div>
             </div>
-            <button class="menu-text" onclick="StartTimer()">Start</button>
-            <button class="icon">
+            <button id="start-button" class="menu-text" onclick="StartTimer()">Start</button>
+            <button id="stop-button" class="menu-text hide" onclick="StopTimer()">Stop</button>
+            <button id="settings-button" class="icon" onclick="EditTimer()">
                 <img src="images/gear.svg" alt="Settings" />
             </button>
+            <button id="accept-button" class="icon hide" onclick="AcceptChanges()">
+                <img src="images/check.svg" alt="Accept" />
+            </button>
         </div>
-
     </div>
-
 </body>
-
 </html>

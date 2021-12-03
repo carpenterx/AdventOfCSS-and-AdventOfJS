@@ -33,7 +33,14 @@ body {
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+#green-circle {
     stroke: #09A65A;
+}
+
+#red-circle {
+    stroke: #900A0A;
 }
 
 .timer {
@@ -117,4 +124,8 @@ input[type=text]:disabled {
   
 .icon:hover {
     opacity: 1;
+}
+
+.hide {
+    display: none;
 }
