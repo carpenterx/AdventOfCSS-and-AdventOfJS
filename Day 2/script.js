@@ -3,11 +3,33 @@ const frenchFries = {
     price: '2.23',
     image: 'images/plate__french-fries.png'
 };
+const salmonVegetables = {
+    name: 'Salmon and Vegetables',
+    price: '5.12',
+    image: 'images/plate__salmon-vegetables.png'
+};
+const spaghetti = {
+    name: 'Spaghetti with Meat Sauce',
+    price: '7.82',
+    image: 'images/plate__spaghetti-meat-sauce.png'
+};
 
 const cartItems = document.getElementById("cart-items")
 const menuFries = document.getElementById("menu-fries")
-menuFries.addEventListener("click", AddItem(frenchFries))
+const menuSalmon = document.getElementById("menu-salmon")
+const menuSpaghetti = document.getElementById("menu-spaghetti")
 
+menuFries.onclick = function() {
+    AddItem(frenchFries);
+}
+
+menuSalmon.onclick = function() {
+    AddItem(salmonVegetables);
+}
+
+menuSpaghetti.onclick = function() {
+    AddItem(spaghetti);
+}
 
 function AddItem(menuItem) {
     cartItems.innerHTML += GetCartItemHTML(menuItem)
@@ -37,7 +59,7 @@ function GetCartItemHTML(menuItem) {
                 <div class="cart-item-qty">1</div>
                 <div class="cart-item-data">
                     <div class="cart-item-name">${menuItem.name}</div>
-                    <div class="cart-item-price">$${menuItem.price}</div>
+                    <div class="cart-item-price">${menuItem.price}</div>
                     <div class="cart-item-menu">
                         <button class="cart-item-btn">
                             <img src="images/chevron.svg" />
@@ -46,7 +68,7 @@ function GetCartItemHTML(menuItem) {
                         <button class="cart-item-btn">
                             <img class="flip" src="images/chevron.svg" />
                         </button>
-                        <div class="cart-item-total">$4.46</div>
+                        <div class="cart-item-total">${menuItem.price}</div>
                     </div>
                 </div>
             </div>`

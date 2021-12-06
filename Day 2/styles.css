@@ -193,6 +193,10 @@ h1 {
     color: #000000;
 }
 
+.menu-item-price::before, .cart-item-price::before, .cart-item-total::before, .amount::before {
+    content: "$";
+}
+
 .menu-item-button {
     padding: 4px 18px;
     width: 130px;
