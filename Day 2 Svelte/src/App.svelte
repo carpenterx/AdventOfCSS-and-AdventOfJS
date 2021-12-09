@@ -11,22 +11,47 @@
 	import Menu from "./Menu.svelte";
 	import Cart from "./Cart.svelte";
 	const frenchFries = {
-		name: 'French Fries with Ketchup',
-		price: '2.23',
-		image: 'images/plate__french-fries.png'
+		name: "French Fries with Ketchup",
+		price: 2.23,
+		image: "images/plate__french-fries.png"
 	};
     const salmonVegetables = {
-		name: 'Salmon and Vegetables',
-		price: '5.12',
-		image: 'images/plate__salmon-vegetables.png'
+		name: "Salmon and Vegetables",
+		price: 5.12,
+		image: "images/plate__salmon-vegetables.png"
 	};
 	const spaghetti = {
-		name: 'Spaghetti with Meat Sauce',
-		price: '7.82',
-		image: 'images/plate__spaghetti-meat-sauce.png'
+		name: "Spaghetti with Meat Sauce",
+		price: 7.82,
+		image: "images/plate__spaghetti-meat-sauce.png"
 	};
-	var menuItems = [frenchFries, salmonVegetables, spaghetti];
-	var cartItems = [frenchFries, salmonVegetables, spaghetti];
+	const chickenSalad = {
+		name: "Chicken Salad with Parmesean",
+		price: 6.98,
+		image: "images/plate__chicken-salad.png"
+	};
+	const fishSticks = {
+		name: "Fish Sticks and Fries",
+		price: 6.34,
+		image: "images/plate__fish-sticks-fries.png"
+	};
+	const ravioli = {
+		name: "Ravioli",
+		price: 6.45,
+		image: "images/plate__ravioli.png"
+	};
+	const tortellini = {
+		name: "Tortellini",
+		price: 6.05,
+		image: "images/plate__tortellini.png"
+	};
+	const baconEggs = {
+		name: "Bacon, Eggs, and Toast",
+		price: 5.99,
+		image: "images/plate__bacon-eggs.png"
+	};
+	var menuItems = [frenchFries, salmonVegetables, spaghetti, chickenSalad, fishSticks, ravioli, tortellini, baconEggs];
+	var cartItems = [frenchFries, salmonVegetables, spaghetti, chickenSalad, fishSticks, ravioli, tortellini, baconEggs];
 </script>
 
 <main>
