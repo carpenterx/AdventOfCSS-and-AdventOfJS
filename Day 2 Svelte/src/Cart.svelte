@@ -1,40 +1,35 @@
-<svelte:head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-</svelte:head>
-
 <script>
-	import Menu from "./Menu.svelte";
-	import Cart from "./Cart.svelte";
-	const frenchFries = {
-		name: 'French Fries with Ketchup',
-		price: '2.23',
-		image: 'images/plate__french-fries.png'
-	};
-    const salmonVegetables = {
-		name: 'Salmon and Vegetables',
-		price: '5.12',
-		image: 'images/plate__salmon-vegetables.png'
-	};
-	const spaghetti = {
-		name: 'Spaghetti with Meat Sauce',
-		price: '7.82',
-		image: 'images/plate__spaghetti-meat-sauce.png'
-	};
-	var menuItems = [frenchFries, salmonVegetables, spaghetti];
-	var cartItems = [frenchFries, salmonVegetables, spaghetti];
+	import CartItem from "./CartItem.svelte";
+    export let items = [frenchFries, salmonVegetables, spaghetti];
 </script>
 
-<main>
-	<Menu items={menuItems}/>
-	<Cart items={cartItems}/>
-</main>
+<div class="cart">
+    <div class="container">
+        <h1>Your Cart</h1>
+        {#if items.length == 0}
+            <div id="empty-cart" class="empty-cart">Your cart is empty.</div>
+        {:else}
+            <div class="cart-items" id="cart-items">
+                {#each items as cartItem}
+                    <CartItem item={cartItem}/>
+                {/each}
+            </div>
+            <div id="total-container">
+                <div class="subtotal">
+                    <span class="label">Subtotal:</span><span class="amount">20.10</span>
+                </div>
+                <div class="subtotal">
+                    <span class="label">Tax:</span><span class="amount">1.96</span>
+                </div>
+                <div class="subtotal">
+                    <span class="label">Total:</span><span class="amount purple">30.12</span>
+                </div>
+            </div>
+        {/if}
+    </div>
+</div>
 
-<!-- <style>
+<style>
 	:root {
 		--bg-color: #EFF0F6;
 		--border-color: #D7D7F9;
@@ -65,7 +60,7 @@
 		background-color: #a8bbbf;
 	}
 
-	body {
+	/* body {
 		background: url('images/bg__left.svg') left 10% no-repeat,
 			url('images/bg__top-right.svg') right top no-repeat,
 			#EFF0F6 url('images/bg__btm-right.svg') right bottom no-repeat;
@@ -74,7 +69,7 @@
 		padding: 0;
 		min-height: 100%;
 		min-width: 100%;
-	}
+	} */
 
 	.container {
 		height: 812px;
@@ -89,8 +84,6 @@
 		margin-bottom: 24px;
 	}
 
-	.cart-item-price::before,
-	.cart-item-total::before,
 	.amount::before {
 		content: "$";
 	}
@@ -104,6 +97,21 @@
 		background: #FFFFFF;
 		box-shadow: 0px 0px 70px #C7CBE3;
 		border-radius: 25px;
+	}
+
+    h1 {
+		width: 190px;
+		height: 48px;
+		margin-left: 38px;
+		margin-top: 49px;
+
+		font-family: Poppins;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 32px;
+		line-height: 48px;
+
+		color: #000000;
 	}
 
 	.empty-cart {
@@ -135,7 +143,7 @@
 		margin-left: 24px;
 	}
 
-	.cart-item {
+	/* .cart-item {
 		position: relative;
 		width: 321.28px;
 		height: 100.67px;
@@ -143,20 +151,20 @@
 		border-bottom: 1px solid var(--border-color);
 		padding-bottom: 24px;
 		margin-bottom: 28px;
-	}
+	} */
 
-	.cart-item:last-of-type {
+	/* .cart-item:last-of-type {
 		border-bottom: 5px solid var(--border-color);
-	}
+	} */
 
-	.cart-item-image {
+	/* .cart-item-image {
 		width: 64.46px;
 		height: 62.82px;
 
 		filter: drop-shadow(0px 5.02591px 5.02591px rgba(0, 0, 0, 0.25));
-	}
+	} */
 
-	.cart-item-qty {
+	/* .cart-item-qty {
 		position: absolute;
 		width: 32px;
 		height: 32px;
@@ -175,9 +183,9 @@
 		text-align: center;
 
 		color: #FFFFFF;
-	}
+	} */
 
-	.cart-item-data {
+	/* .cart-item-data {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -188,9 +196,9 @@
 		height: 91.62px;
 		left: 83px;
 		top: 9px;
-	}
+	} */
 
-	.cart-item-name {
+	/* .cart-item-name {
 		font-family: Poppins;
 		font-style: normal;
 		font-weight: normal;
@@ -198,9 +206,9 @@
 		line-height: 20px;
 
 		color: #000000;
-	}
+	} */
 
-	.cart-item-price {
+	/* .cart-item-price {
 		font-family: Poppins;
 		font-style: normal;
 		font-weight: bold;
@@ -208,9 +216,9 @@
 		line-height: 32px;
 
 		color: #000000;
-	}
+	} */
 
-	.cart-item-menu {
+	/* .cart-item-menu {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -220,9 +228,9 @@
 		position: static;
 		width: 239px;
 		height: 32px;
-	}
+	} */
 
-	.cart-item-btn {
+	/* .cart-item-btn {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -239,19 +247,19 @@
 		border: none;
 		margin: 0;
 		cursor: pointer;
-	}
+	} */
 
-	.cart-item-btn:hover,
+	/* .cart-item-btn:hover,
 	.menu-item-button:hover {
 		background: #000000;
-	}
+	} */
 
-	.flip {
+	/* .flip {
 		-webkit-transform: scaleX(-1);
 		transform: scaleX(-1);
-	}
+	} */
 
-	.cart-item-menu-qty {
+	/* .cart-item-menu-qty {
 		font-family: Poppins;
 		font-style: normal;
 		font-weight: bold;
@@ -261,9 +269,9 @@
 		text-align: center;
 
 		color: #000000;
-	}
+	} */
 
-	.cart-item-total {
+	/* .cart-item-total {
 		font-family: Poppins;
 		font-style: normal;
 		font-weight: bold;
@@ -273,7 +281,7 @@
 		text-align: right;
 
 		color: #000000;
-	}
+	} */
 
 	.subtotal {
 		display: flex;
@@ -317,8 +325,4 @@
 	.purple {
 		color: var(--primary);
 	}
-
-	.hide {
-		display: none;
-	}
-</style> -->
+</style>

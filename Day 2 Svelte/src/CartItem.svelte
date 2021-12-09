@@ -1,40 +1,43 @@
-<svelte:head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-</svelte:head>
-
 <script>
-	import Menu from "./Menu.svelte";
-	import Cart from "./Cart.svelte";
-	const frenchFries = {
-		name: 'French Fries with Ketchup',
-		price: '2.23',
-		image: 'images/plate__french-fries.png'
-	};
-    const salmonVegetables = {
-		name: 'Salmon and Vegetables',
-		price: '5.12',
-		image: 'images/plate__salmon-vegetables.png'
-	};
-	const spaghetti = {
-		name: 'Spaghetti with Meat Sauce',
-		price: '7.82',
-		image: 'images/plate__spaghetti-meat-sauce.png'
-	};
-	var menuItems = [frenchFries, salmonVegetables, spaghetti];
-	var cartItems = [frenchFries, salmonVegetables, spaghetti];
+    export let item = {
+    name: 'French Fries with Ketchup',
+    price: '2.23',
+    image: 'images/plate__french-fries.png'
+    };
+
+    let qty = 1;
+
+    function IncrementQty()
+    {
+        qty++;
+    }
+
+    function DecrementQty()
+    {
+        qty--;
+    }
 </script>
 
-<main>
-	<Menu items={menuItems}/>
-	<Cart items={cartItems}/>
-</main>
+<div class="cart-item">
+    <img class="cart-item-image" src="{item.image}" alt={item.name} />
+    <div class="cart-item-qty">{qty}</div>
+    <div class="cart-item-data">
+        <div class="cart-item-name">{item.name}</div>
+        <div class="cart-item-price">{item.price}</div>
+        <div class="cart-item-menu">
+            <button class="cart-item-btn" on:click={DecrementQty}>
+                <img src="images/chevron.svg" alt="Decrement" />
+            </button>
+            <div class="cart-item-menu-qty">{qty}</div>
+            <button class="cart-item-btn" on:click={IncrementQty}>
+                <img class="flip" src="images/chevron.svg" alt="Increment" />
+            </button>
+            <div class="cart-item-total">{(item.price * qty).toFixed(2)}</div>
+        </div>
+    </div>
+</div>
 
-<!-- <style>
+<style>
 	:root {
 		--bg-color: #EFF0F6;
 		--border-color: #D7D7F9;
@@ -46,7 +49,7 @@
 	}
 
 	/* custom scrollbar */
-	::-webkit-scrollbar {
+	/* ::-webkit-scrollbar {
 		width: 18px;
 	}
 
@@ -63,9 +66,9 @@
 
 	::-webkit-scrollbar-thumb:hover {
 		background-color: #a8bbbf;
-	}
+	} */
 
-	body {
+	/* body {
 		background: url('images/bg__left.svg') left 10% no-repeat,
 			url('images/bg__top-right.svg') right top no-repeat,
 			#EFF0F6 url('images/bg__btm-right.svg') right bottom no-repeat;
@@ -74,28 +77,27 @@
 		padding: 0;
 		min-height: 100%;
 		min-width: 100%;
-	}
+	} */
 
-	.container {
+	/* .container {
 		height: 812px;
 
 		overflow-x: hidden;
 		overflow-y: scroll;
 		margin-top: 24px;
 		margin-bottom: 24px;
-	}
+	} */
 
-	.subtotal:last-child {
+	/* .subtotal:last-child {
 		margin-bottom: 24px;
-	}
+	} */
 
 	.cart-item-price::before,
-	.cart-item-total::before,
-	.amount::before {
+	.cart-item-total::before {
 		content: "$";
 	}
 
-	.cart {
+	/* .cart {
 		position: absolute;
 		width: 375px;
 		left: 745px;
@@ -104,9 +106,9 @@
 		background: #FFFFFF;
 		box-shadow: 0px 0px 70px #C7CBE3;
 		border-radius: 25px;
-	}
+	} */
 
-	.empty-cart {
+	/* .empty-cart {
 		position: absolute;
 		width: 149px;
 		height: 24px;
@@ -122,9 +124,9 @@
 		text-align: center;
 
 		color: #000000;
-	}
+	} */
 
-	.cart-items {
+	/* .cart-items {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -133,7 +135,7 @@
 		width: 387.15px;
 		margin-top: 20px;
 		margin-left: 24px;
-	}
+	} */
 
 	.cart-item {
 		position: relative;
@@ -231,6 +233,7 @@
 		left: 0px;
 		top: 0px;
 
+        user-select: none;
 		background: var(--primary);
 		border-radius: 20px;
 
@@ -241,8 +244,7 @@
 		cursor: pointer;
 	}
 
-	.cart-item-btn:hover,
-	.menu-item-button:hover {
+	.cart-item-btn:hover {
 		background: #000000;
 	}
 
@@ -275,19 +277,19 @@
 		color: #000000;
 	}
 
-	.subtotal {
+	/* .subtotal {
 		display: flex;
 		justify-content: end;
 		align-items: baseline;
 		margin-right: 26px;
-	}
+	} */
 
-	.label,
+	/* .label,
 	.amount {
 		display: inline-block;
-	}
+	} */
 
-	.label {
+	/* .label {
 		width: 96px;
 		font-family: Poppins;
 		font-style: normal;
@@ -299,9 +301,9 @@
 
 		color: #000000;
 		margin-right: 20px;
-	}
+	} */
 
-	.amount {
+	/* .amount {
 		width: 105px;
 		font-family: Poppins;
 		font-style: normal;
@@ -312,13 +314,9 @@
 		text-align: right;
 
 		color: #000000;
-	}
+	} */
 
-	.purple {
+	/* .purple {
 		color: var(--primary);
-	}
-
-	.hide {
-		display: none;
-	}
-</style> -->
+	} */
+</style>

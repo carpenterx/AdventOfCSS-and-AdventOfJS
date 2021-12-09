@@ -14,13 +14,13 @@
 
 <div class="menu-item">
     <div class="menu-item-bg {color}"></div>
-    <img class="menu-item-image" src={item.image} />
+    <img class="menu-item-image" src={item.image} alt={item.name} />
     <div class="menu-item-data">
         <div class="menu-item-name">{item.name}</div>
         <div class="menu-item-price">{item.price}</div>
         <!-- <button class="menu-item-button" on:click={AddToCart}>{buttonLabel}</button> -->
         {#if inCart}
-            <button class="in-cart-button"><img class="button-icon" src="images/check.svg"><span>{buttonLabel}</span></button>
+            <button class="in-cart-button"><img class="button-icon" src="images/check.svg" alt="Check"><span>{buttonLabel}</span></button>
         {:else}
             <button class="menu-item-button" on:click={AddToCart}>{buttonLabel}</button>
         {/if}
@@ -131,6 +131,10 @@
 		margin: 0;
 		text-decoration: none;
 		cursor: pointer;
+	}
+
+	.menu-item-button:hover {
+		background: #000000;
 	}
 
 	.in-cart-button {
