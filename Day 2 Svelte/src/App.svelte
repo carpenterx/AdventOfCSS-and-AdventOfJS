@@ -68,8 +68,6 @@
 		color: "bg-pink"
 	};
 	var menuItems = [frenchFries, salmonVegetables, spaghetti, chickenSalad, fishSticks, ravioli, tortellini, baconEggs];
-	//var cartItems = [frenchFries, salmonVegetables, spaghetti, chickenSalad, fishSticks, ravioli, tortellini, baconEggs];
-	//var cartItems = [];
 
 	function AddToCart(event) {
 		event.detail.quantity = 1;
@@ -77,13 +75,6 @@
 	}
 
 	function RemoveCartItem(event) {
-		// const index = items.indexOf(event.detail);
-		// if (index > -1) {
-		// 	//items.splice(index, 1);
-		// 	items = [...items.slice(0, index), ...items.slice(index + 1)];
-		// 	event.detail.inCart = false;
-		// 	//console.log(items);
-		// }
 		event.detail.quantity = 0;
 		menuItems = menuItems;
 	}

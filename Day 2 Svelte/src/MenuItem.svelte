@@ -4,7 +4,6 @@
 	const dispatch = createEventDispatcher();
 
     export let item;
-    //export let color = "bg-blue";
 
     let addToCartLabel = "Add to Cart";
 	let inCartLabel = "In Cart";

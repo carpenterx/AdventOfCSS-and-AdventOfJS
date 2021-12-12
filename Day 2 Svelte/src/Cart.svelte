@@ -68,14 +68,6 @@
 		margin-bottom: 24px;
 	}
 
-	/* .subtotal:last-child {
-		margin-bottom: 24px;
-	}
-
-	.amount::before {
-		content: "$";
-	} */
-
 	.cart {
 		position: absolute;
 		width: 375px;
@@ -130,47 +122,4 @@
 		margin-top: 20px;
 		margin-left: 24px;
 	}
-
-	/* .subtotal {
-		display: flex;
-		justify-content: end;
-		align-items: baseline;
-		margin-right: 26px;
-	}
-
-	.label,
-	.amount {
-		display: inline-block;
-	}
-
-	.label {
-		width: 96px;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 16px;
-		line-height: 32px;
-
-		text-align: right;
-
-		color: #000000;
-		margin-right: 20px;
-	} */
-
-	/* .amount {
-		width: 105px;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 32px;
-		line-height: 32px;
-
-		text-align: right;
-
-		color: #000000;
-	}
-
-	.purple {
-		color: var(--primary);
-	} */
 </style>
