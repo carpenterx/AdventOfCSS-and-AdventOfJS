@@ -1,26 +1,41 @@
 <script>
-    export let item = {
-    name: 'French Fries with Ketchup',
-    price: '2.23',
-    image: 'images/plate__french-fries.png'
-    };
+	import { createEventDispatcher } from 'svelte';
+	import { onMount } from 'svelte';
 
-    let qty = 1;
+	const dispatch = createEventDispatcher();
+
+    export let item;
+
+	let unitCost;
+	onMount(() => { UpdateUnitCost(item.price); });
 
     function IncrementQty()
     {
-        qty++;
+        item.quantity++;
+		UpdateUnitCost(item.price);
     }
 
     function DecrementQty()
     {
-        qty--;
+        item.quantity--;
+		UpdateUnitCost(-item.price);
+		if (item.quantity == 0)
+		{
+			dispatch("delete", item);
+		}
     }
+
+	function UpdateUnitCost(cost) {
+		//unitCost = item.price * item.quantity;
+		unitCost = (item.price * item.quantity).toFixed(2);
+		
+		dispatch("qty", cost);
+	}
 </script>
 
 <div class="cart-item">
     <img class="cart-item-image" src="{item.image}" alt={item.name} />
-    <div class="cart-item-qty">{qty}</div>
+    <div class="cart-item-qty">{item.quantity}</div>
     <div class="cart-item-data">
         <div class="cart-item-name">{item.name}</div>
         <div class="cart-item-price">{item.price}</div>
@@ -28,11 +43,11 @@
             <button class="cart-item-btn" on:click={DecrementQty}>
                 <img src="images/chevron.svg" alt="Decrement" />
             </button>
-            <div class="cart-item-menu-qty">{qty}</div>
+            <div class="cart-item-menu-qty">{item.quantity}</div>
             <button class="cart-item-btn" on:click={IncrementQty}>
                 <img class="flip" src="images/chevron.svg" alt="Increment" />
             </button>
-            <div class="cart-item-total">{(item.price * qty).toFixed(2)}</div>
+            <div class="cart-item-total">{unitCost}</div>
         </div>
     </div>
 </div>
@@ -48,94 +63,10 @@
 		--white-ice: #defef0;
 	}
 
-	/* custom scrollbar */
-	/* ::-webkit-scrollbar {
-		width: 18px;
-	}
-
-	::-webkit-scrollbar-track {
-		background-color: transparent;
-	}
-
-	::-webkit-scrollbar-thumb {
-		background-color: #d6dee1;
-		border-radius: 18px;
-		border: 6px solid transparent;
-		background-clip: content-box;
-	}
-
-	::-webkit-scrollbar-thumb:hover {
-		background-color: #a8bbbf;
-	} */
-
-	/* body {
-		background: url('images/bg__left.svg') left 10% no-repeat,
-			url('images/bg__top-right.svg') right top no-repeat,
-			#EFF0F6 url('images/bg__btm-right.svg') right bottom no-repeat;
-		font-family: 'Poppins', sans-serif;
-		margin: 0;
-		padding: 0;
-		min-height: 100%;
-		min-width: 100%;
-	} */
-
-	/* .container {
-		height: 812px;
-
-		overflow-x: hidden;
-		overflow-y: scroll;
-		margin-top: 24px;
-		margin-bottom: 24px;
-	} */
-
-	/* .subtotal:last-child {
-		margin-bottom: 24px;
-	} */
-
 	.cart-item-price::before,
 	.cart-item-total::before {
 		content: "$";
 	}
-
-	/* .cart {
-		position: absolute;
-		width: 375px;
-		left: 745px;
-		top: 106px;
-
-		background: #FFFFFF;
-		box-shadow: 0px 0px 70px #C7CBE3;
-		border-radius: 25px;
-	} */
-
-	/* .empty-cart {
-		position: absolute;
-		width: 149px;
-		height: 24px;
-		left: 37.07px;
-		top: 126.43px;
-
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 16px;
-		line-height: 24px;
-
-		text-align: center;
-
-		color: #000000;
-	} */
-
-	/* .cart-items {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 0px;
-
-		width: 387.15px;
-		margin-top: 20px;
-		margin-left: 24px;
-	} */
 
 	.cart-item {
 		position: relative;
@@ -276,47 +207,4 @@
 
 		color: #000000;
 	}
-
-	/* .subtotal {
-		display: flex;
-		justify-content: end;
-		align-items: baseline;
-		margin-right: 26px;
-	} */
-
-	/* .label,
-	.amount {
-		display: inline-block;
-	} */
-
-	/* .label {
-		width: 96px;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 16px;
-		line-height: 32px;
-
-		text-align: right;
-
-		color: #000000;
-		margin-right: 20px;
-	} */
-
-	/* .amount {
-		width: 105px;
-		font-family: Poppins;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 32px;
-		line-height: 32px;
-
-		text-align: right;
-
-		color: #000000;
-	} */
-
-	/* .purple {
-		color: var(--primary);
-	} */
 </style>

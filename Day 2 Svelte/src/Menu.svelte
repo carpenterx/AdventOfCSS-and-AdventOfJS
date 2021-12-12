@@ -1,21 +1,6 @@
 <script>
 	import MenuItem from "./MenuItem.svelte";
 	export let items;
-    // const frenchFries = {
-	// 	name: 'French Fries with Ketchup',
-	// 	price: '2.23',
-	// 	image: 'images/plate__french-fries.png'
-	// };
-	// const salmonVegetables = {
-	// 	name: 'Salmon and Vegetables',
-	// 	price: '5.12',
-	// 	image: 'images/plate__salmon-vegetables.png'
-	// };
-	// const spaghetti = {
-	// 	name: 'Spaghetti with Meat Sauce',
-	// 	price: '7.82',
-	// 	image: 'images/plate__spaghetti-meat-sauce.png'
-	// };
 </script>
 
 <div class="menu">
@@ -23,14 +8,8 @@
         <h1>To Go Menu</h1>
         <div class="menu-items">
 			{#each items as menuItem}
-                <MenuItem item={menuItem}/>
+                <MenuItem item={menuItem} on:add/>
             {/each}
-            <!-- <MenuItem item={frenchFries} />
-            <MenuItem item={salmonVegetables} color="bg-pink" />
-            <MenuItem item={spaghetti} color="bg-white"/>
-            <MenuItem item={frenchFries} />
-            <MenuItem item={salmonVegetables} color="bg-pink" />
-            <MenuItem item={spaghetti} color="bg-white"/> -->
         </div>
     </div>
 </div>

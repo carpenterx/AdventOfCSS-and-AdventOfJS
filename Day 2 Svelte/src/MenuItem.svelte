@@ -1,28 +1,30 @@
 <script>
-    export let item;
-    export let color = "bg-blue";
+	import { createEventDispatcher } from 'svelte';
 
-    let inCart = false;
-    let buttonLabel = "Add to Cart";
+	const dispatch = createEventDispatcher();
+
+    export let item;
+    //export let color = "bg-blue";
+
+    let addToCartLabel = "Add to Cart";
+	let inCartLabel = "In Cart";
 
     function AddToCart()
     {
-        buttonLabel = "In Cart";
-        inCart = true;
+		dispatch("add", item);
     }
 </script>
 
 <div class="menu-item">
-    <div class="menu-item-bg {color}"></div>
+    <div class="menu-item-bg {item.color}"></div>
     <img class="menu-item-image" src={item.image} alt={item.name} />
     <div class="menu-item-data">
         <div class="menu-item-name">{item.name}</div>
         <div class="menu-item-price">{item.price}</div>
-        <!-- <button class="menu-item-button" on:click={AddToCart}>{buttonLabel}</button> -->
-        {#if inCart}
-            <button class="in-cart-button"><img class="button-icon" src="images/check.svg" alt="Check"><span>{buttonLabel}</span></button>
+        {#if item.quantity > 0}
+            <button class="in-cart-button"><img class="button-icon" src="images/check.svg" alt="Check"><span>{inCartLabel}</span></button>
         {:else}
-            <button class="menu-item-button" on:click={AddToCart}>{buttonLabel}</button>
+            <button class="menu-item-button" on:click={AddToCart}>{addToCartLabel}</button>
         {/if}
     </div>
 </div>
