@@ -84,3 +84,9 @@
 	<Menu items={menuItems} on:add={AddToCart}/>
 	<Cart items={menuItems} on:delete={RemoveCartItem}/>
 </main>
+
+<style>
+	main {
+		height: 1024px;
+	}
+</style>
