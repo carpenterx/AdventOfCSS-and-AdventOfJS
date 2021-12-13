@@ -1,0 +1,46 @@
+:root {
+    --background-teal: #37B2C3;
+    --yellow: #ffd200;
+    --pink: #f40082;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background-teal);
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-keys {
+    stroke: lightgray;
+    fill: white;
+    transition: transform .3s ease-out;
+}
+
+.white-keys:hover {
+    fill: var(--yellow);
+    transform: translate(0, 5px);
+}
+
+.black-keys {
+    stroke: darkgray;
+    fill: black;
+    transition: transform .3s ease-out;
+}
+
+.black-keys:hover {
+    fill: var(--pink);
+    transform: translate(0, 4px);
+}
