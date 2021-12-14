@@ -14,168 +14,64 @@
 </head>
 
 <body>
+    <!-- <h1><span id="key-display"></span>: <span id="key-pressed"></span></h1> -->
     <div class="container">
+        <div><span>score: </span><span id="score" class="score">0</span></div>
         <div class="keyboard">
             <div class="keys">
-                <div class="key">
-                    <div class="key-text">`</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">1</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">2</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">3</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">4</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">5</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">6</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">7</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">8</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">9</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">0</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">-</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">=</div>
-                </div>
-                <div class="key large">
-                    <div class="key-text gray">Del</div>
-                </div>
-                <div class="key large">
-                    <div class="key-text gray">Tab</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">Q</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">W</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">E</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">R</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">T</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">Y</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">U</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">I</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">O</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">P</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">[</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">]</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">\</div>
-                </div>
-                <div class="key large-2">
-                    <div class="key-text gray">Caps</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">A</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">S</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">D</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">F</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">G</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">H</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">J</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">K</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">L</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">;</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">'</div>
-                </div>
-                <div class="key large">
-                    <div class="key-text gray">⏎</div>
-                </div>
-                <div class="key large-3">
-                    <div class="key-text gray">Shift</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">Z</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">X</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">C</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">V</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">B</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">N</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">M</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">,</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">.</div>
-                </div>
-                <div class="key">
-                    <div class="key-text">/</div>
-                </div>
-                <div class="key large-2">
-                    <div class="key-text gray">Shift</div>
-                </div>
+                <button class="key key-text" data-key="Backquote">`</button>
+                <button class="key key-text" data-key="Digit1">1</button>
+                <button class="key key-text" data-key="Digit2">2</button>
+                <button class="key key-text" data-key="Digit3">3</button>
+                <button class="key key-text" data-key="Digit4">4</button>
+                <button class="key key-text" data-key="Digit5">5</button>
+                <button class="key key-text" data-key="Digit6">6</button>
+                <button class="key key-text" data-key="Digit7">7</button>
+                <button class="key key-text" data-key="Digit8">8</button>
+                <button class="key key-text" data-key="Digit9">9</button>
+                <button class="key key-text" data-key="Digit0">0</button>
+                <button class="key key-text" data-key="Minus">-</button>
+                <button class="key key-text" data-key="Equal">=</button>
+                <button class="key key-text large gray" data-key="Backspace">Del</button>
+                <button class="key key-text large gray" data-key="Tab">Tab</button>
+                <button class="key key-text" data-key="KeyQ">Q</button>
+                <button class="key key-text" data-key="KeyW">W</button>
+                <button class="key key-text" data-key="KeyE">E</button>
+                <button class="key key-text" data-key="KeyR">R</button>
+                <button class="key key-text" data-key="KeyT">T</button>
+                <button class="key key-text" data-key="KeyY">Y</button>
+                <button class="key key-text" data-key="KeyU">U</button>
+                <button class="key key-text" data-key="KeyI">I</button>
+                <button class="key key-text" data-key="KeyO">O</button>
+                <button class="key key-text" data-key="KeyP">P</button>
+                <button class="key key-text" data-key="BracketLeft">[</button>
+                <button class="key key-text" data-key="BracketRight">]</button>
+                <button class="key key-text" data-key="Backslash">\</button>
+                <button class="key key-text large-2 gray" data-key="CapsLock">Caps</button>
+                <button class="key key-text" data-key="KeyA">A</button>
+                <button class="key key-text" data-key="KeyS">S</button>
+                <button class="key key-text" data-key="KeyD">D</button>
+                <button class="key key-text" data-key="KeyF">F</button>
+                <button class="key key-text" data-key="KeyG">G</button>
+                <button class="key key-text" data-key="KeyH">H</button>
+                <button class="key key-text" data-key="KeyJ">J</button>
+                <button class="key key-text" data-key="KeyK">K</button>
+                <button class="key key-text" data-key="KeyL">L</button>
+                <button class="key key-text" data-key="Semicolon">;</button>
+                <button class="key key-text" data-key="Quote">'</button>
+                <button class="key key-text large gray" data-key="Enter">⏎</button>
+                <button class="key key-text large-3 gray" data-key="ShiftLeft">Shift</button>
+                <button class="key key-text" data-key="KeyZ">Z</button>
+                <button class="key key-text" data-key="KeyX">X</button>
+                <button class="key key-text" data-key="KeyC">C</button>
+                <button class="key key-text" data-key="KeyV">V</button>
+                <button class="key key-text" data-key="KeyB">B</button>
+                <button class="key key-text" data-key="KeyN">N</button>
+                <button class="key key-text" data-key="KeyM">M</button>
+                <button class="key key-text" data-key="Comma">,</button>
+                <button class="key key-text" data-key="Period">.</button>
+                <button class="key key-text" data-key="Slash">/</button>
+                <button class="key key-text large-2 gray" data-key="ShiftRight">Shift</button>
             </div>
         </div>
     </div>
