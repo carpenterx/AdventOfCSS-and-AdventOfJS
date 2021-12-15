@@ -1,0 +1,11 @@
+:root {
+    --dark-gray: #262529;
+    --gold: #FFC700;
+    --pink: #EA346F;
+    --progress-gray: #4D4C53;
+    --button-color: #333139;
+}
+
+body {
+    background-color: var(--dark-gray);
+}
