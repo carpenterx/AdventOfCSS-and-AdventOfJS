@@ -6,6 +6,129 @@
     --button-color: #333139;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    margin: 0;
     background-color: var(--dark-gray);
+}
+
+.container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.component {
+    width: 830.15px;
+    height: 577.28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--dark-gray);
+    box-shadow: 0px 0px 25px #000000;
+    border-radius: 20px;
+}
+
+.dollar-ammount {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 93.7698px;
+    line-height: 118px;
+
+    color: var(--gold);
+}
+
+.dollar-ammount::before {
+    content: "$";
+
+    position: relative;
+    left: 0px;
+    top: -30px;
+
+    font-size: 65.081px;
+    line-height: 82px;
+    margin-bottom: 35px;
+}
+
+.range {
+    width: 680px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    width: 700px;
+    height: 14px;
+    background: var(--progress-gray);
+    outline: none;
+    margin: 70px 0;
+}
+
+/* slider handle */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    background: var(--pink);
+    cursor: pointer;
+    border-radius: 50%;
+    outline: 15px solid rgba(234, 52, 111, .2);
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    /* firefox needs this */
+    width: 50px;
+    height: 50px;
+    background: var(--pink);
+    cursor: pointer;
+    border-radius: 50%;
+    outline: 15px solid rgba(234, 52, 111, .2);
+}
+
+/* progress (before knob) within Firefox */
+input[type=range]::-moz-range-progress {
+    background: var(--pink);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 14px;
+}
+
+button {
+    width: 333.12px;
+    height: 108.7px;
+
+    background: var(--button-color);
+    border-radius: 100px;
+    border: none;
+
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 0.15em;
+
+    color: #FFFFFF;
+}
+
+button:hover {
+    background: #FFFFFF;
+    color: var(--button-color);
 }
