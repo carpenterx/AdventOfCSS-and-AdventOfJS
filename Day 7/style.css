@@ -18,15 +18,11 @@ html {
 }
 
 body {
-    /* height: 100%; */
-    /* font-family: 'Inter', sans-serif; */
-    /* font-family: 'Roboto Mono', monospace; */
     margin: 0;
     background-color: var(--background);
 }
 
 .container {
-    /* height: 100%; */
     padding: 0;
     margin: 0;
     display: flex;
@@ -133,7 +129,6 @@ label {
     font-size: 15.0038px;
     line-height: 20px;
 
-    /* text-align: right; */
     text-align: center;
 
     color: #333333;
@@ -210,12 +205,8 @@ input[type=radio]:checked+.box span {
 }
 
 .box {
-    /* width: 200px; */
-    /* height: 200px; */
     width: 145.22px;
     height: 72.58px;
-    /* left: 202.02px; */
-    /* top: 0px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -225,19 +216,12 @@ input[type=radio]:checked+.box span {
     border-radius: 17.1472px;
 
     background-color: white;
-    /* display: inline-block; */
-    /* text-align: center; */
     cursor: pointer;
-    /* position: relative; */
-    /* font-family: "Inter", sans-serif; */
-    /* font-weight: 900; */
 
 
 }
 
 .box span {
-    /* display: block; */
-    /* font-size: 1.5em; */
     font-family: Roboto Mono;
     font-style: normal;
     font-weight: bold;

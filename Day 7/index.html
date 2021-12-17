@@ -19,24 +19,23 @@
         <div class="calculator">
             <div class="line line-border">
                 <div class="label">Tip Amount</div>
-                <div class="dollar-amount">4.02</div>
+                <div class="dollar-amount" id="tip-amount">0</div>
             </div>
             <div class="line">
                 <div class="label">Total Per Person</div>
-                <div class="dollar-amount">12.02</div>
+                <div class="dollar-amount" id="total-per-person">0</div>
             </div>
             <div class="subsection">
                 <div class="inputs">
                     <div class="margins vertical-border">
                         <div class="labelled-input">
-                            <input class="input amount-width amount-icon" type="text" name="" id="bill-amount"
-                                value="102.02">
+                            <input class="input amount-width amount-icon" type="text" name="" id="bill-amount">
                             <label class="label amount-width" for="bill-amount">Bill Amount</label>
                         </div>
                     </div>
                     <div class="margins">
                         <div class="labelled-input">
-                            <input class="input people-width people-icon" type="text" name="" id="people" value="25">
+                            <input class="input people-width people-icon" type="text" name="" id="people">
                             <label class="label people-width" for="people">Number of People</label>
                         </div>
                     </div>
@@ -68,7 +67,7 @@
                     </label>
                 </div>
                 <div class="button-container">
-                    <button class="calculate">Calculate</button>
+                    <button class="calculate" id="calculate-btn">Calculate</button>
                 </div>
             </div>
         </div>
