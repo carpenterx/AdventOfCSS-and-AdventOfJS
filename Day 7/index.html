@@ -1,53 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Roboto+Mono:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Tip Calculator</title>
 </head>
+
 <body>
     <div class="container">
         <div class="calculator">
-            <div>
+            <div class="line line-border">
                 <div class="label">Tip Amount</div>
                 <div class="dollar-amount">4.02</div>
             </div>
-            <div>
+            <div class="line">
                 <div class="label">Total Per Person</div>
                 <div class="dollar-amount">12.02</div>
             </div>
             <div class="subsection">
                 <div class="inputs">
-                    <div class="labelled-input">
-                        <input class="input amount-width amount-icon" type="text" name="" id="bill-amount" value="102.02">
-                        <label class="label amount-width" for="bill-amount">Bill Amount</label>
+                    <div class="margins vertical-border">
+                        <div class="labelled-input">
+                            <input class="input amount-width amount-icon" type="text" name="" id="bill-amount"
+                                value="102.02">
+                            <label class="label amount-width" for="bill-amount">Bill Amount</label>
+                        </div>
                     </div>
-                    <div class="labelled-input">
-                        <input class="input people-width people-icon" type="text" name="" id="people" value="25">
-                    <label class="label people-width" for="people">Number of People</label>
+                    <div class="margins">
+                        <div class="labelled-input">
+                            <input class="input people-width people-icon" type="text" name="" id="people" value="25">
+                            <label class="label people-width" for="people">Number of People</label>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <input type="radio" name="percent" id="percent-5" value="5">
-                    <label for="percent-5">5%</label>
-                    <input type="radio" name="percent" id="percent-10" value="10">
-                    <label for="percent-10">10%</label>
-                    <input type="radio" name="percent" id="percent-15" value="15">
-                    <label for="percent-15">15%</label>
-                    <input type="radio" name="percent" id="percent-20" value="20" checked>
-                    <label for="percent-20">20%</label>
+                <div class="radios radios-border">
+                    <label for="percent-5">
+                        <input type="radio" name="percent" id="percent-5" value="5">
+                        <div class="box">
+                            <span>5%</span>
+                        </div>
+                    </label>
+                    <label for="percent-10">
+                        <input type="radio" name="percent" id="percent-10" value="10">
+                        <div class="box">
+                            <span>10%</span>
+                        </div>
+                    </label>
+                    <label for="percent-15">
+                        <input type="radio" name="percent" id="percent-15" value="15">
+                        <div class="box">
+                            <span>15%</span>
+                        </div>
+                    </label>
+                    <label for="percent-20">
+                        <input type="radio" name="percent" id="percent-20" value="20" checked>
+                        <div class="box">
+                            <span>20%</span>
+                        </div>
+                    </label>
                 </div>
-                <div>
-                    <button>Calculate</button>
+                <div class="button-container">
+                    <button class="calculate">Calculate</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
