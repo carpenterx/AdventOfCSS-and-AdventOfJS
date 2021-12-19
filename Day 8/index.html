@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <div class="forecast">
+        <div id="forecast" class="forecast">
             <div class="day-forecast">
                 <div class="day">WED</div>
                 <div class="date">8</div>
@@ -196,14 +196,14 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="day-forecast">
+            <div class="day-forecast">
                 <div class="day">TUE</div>
                 <div class="date">14</div>
-                <div class="day-forecast-widget">
-                    <div class="icon cloudy-icon"><img src="images/cloudy.svg" alt=""></div>
-                    <div class="temperature">71°</div>
+                <div class="day-forecast-widget sunny-background">
+                    <div class="icon"><img class="sunny-icon" src="images/sunny.svg" alt=""></div>
+                    <div class="temperature sunny-temperature">71°</div>
                     <div class="bottom">
-                        <div class="precipitation">
+                        <div class="precipitation sunny-text">
                             <svg class="small-icon" width="32" height="32" viewBox="0 0 32 32"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -213,7 +213,7 @@
                             <div class="precipitation-value">84%</div>
                         </div>
 
-                        <div class="low-temperature">
+                        <div class="low-temperature sunny-text">
                             <svg class="small-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </body>
