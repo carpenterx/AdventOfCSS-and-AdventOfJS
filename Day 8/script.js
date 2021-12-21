@@ -12,7 +12,7 @@ const dayNames = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
 
 const weatherMains = ["Thunderstorm", "Drizzle", "Rain", "Snow", "Clear", "Clouds"]
 const weatherStyles = ["stormy", "partly-cloudy", "rainy", "snowy", "sunny", "cloudy"]
-const defaultStyle = "sunny"
+const defaultStyle = "partly-cloudy"
 
 forecast.innerHTML = ""
 ParseWeatherData()
