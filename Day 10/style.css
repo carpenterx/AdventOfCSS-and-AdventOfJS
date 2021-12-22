@@ -1,0 +1,120 @@
+:root {
+    --background-color: #E3E9F9;
+    --text-input: #6778E8;
+    --text-input-background: #F0F3FA;
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: var(--background-color);
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+
+    width: 575.43px;
+    height: 411.69px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 23px 44px #CAD0E0;
+    border-radius: 10px;
+}
+
+.title {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+
+    text-align: center;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    color: var(--text-input);
+
+    margin-top: 70.79px;
+}
+
+.instructions {
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #737580;
+
+    margin-top: 11.76px;
+}
+
+.digits {
+    display: flex;
+    gap: 21px;
+
+    margin-top: 43.87px;
+}
+
+.digit {
+    width: 81.95px;
+    height: 85.56px;
+
+    background: var(--text-input-background);
+
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 59.6801px;
+    line-height: 75px;
+
+    text-align: center;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    color: var(--text-input);
+}
+
+.verify {
+    padding: 0;
+    border: none;
+
+    width: 508px;
+    height: 75px;
+    background: linear-gradient(93.32deg, #8D9EFF -10.93%, #A674FB 113.82%);
+    border-radius: 10px;
+
+    font-family: Source Sans Pro;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 25px;
+
+    text-align: center;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+    margin-top: 43.87px;
+}
