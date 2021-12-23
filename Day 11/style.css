@@ -8,49 +8,95 @@ body {
 }
 
 .faqs {
+    padding: 20px;
     display: flex;
-}
-
-.faq {
-    position: relative;
-    width: 1060px;
-}
-
-.question-mark {
-    position: absolute;
-    top: 0;
-    left: 16px;
-    width: 70px;
-    height: 129px;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 40px;
 }
 
 .question {
+    margin-top: 40px;
+    position: relative;
+    width: 1060px;
+    height: 140px;
+}
+
+.question-mark {
+    pointer-events: none;
     position: absolute;
-    top: 40px;
-    left: 0;
-    display: block;
+    top: -48px;
+    left: 18px;
+    z-index: 3;
+    width: 83.06px;
+    height: 153.07px;
+    background-image: url(images/question-1.svg);
+    background-repeat: no-repeat;
+}
+
+.alternative {
+    background-image: url(images/question-2.svg);
+}
+
+.question-text {
+    pointer-events: none;
     width: 850px;
     padding: 24px;
     border: 5px solid #000000;
     border-left: 100px solid #000000;
     background: #ffffff;
+    position: relative;
+    z-index: 2;
 }
 
-.answer {
-    position: absolute;
-    top: 50px;
-    left: 56px;
-    display: block;
-    width: 850px;
-    padding: 126px 85px 56px 70px;
+.question-bg {
+    pointer-events: none;
+    width: 1000px;
+    height: 100px;
 
+    background: var(--expanded-background);
+    transform: translateX(60px) translateY(-60px);
+    position: relative;
+    z-index: 1;
+}
+
+.question:hover .question-bg {
     background: var(--expanded-background);
 }
 
 .expander {
+    pointer-events: none;
     width: 24px;
     height: 24px;
     position: absolute;
-    top: 70px;
+    top: 16px;
     right: 16px;
+
+    background-image: url(images/close.svg);
+}
+
+.collapsed .question-bg {
+    background: var(--collapsed-background);
+}
+
+.collapsed .question-bg .expander {
+    background-image: url(images/chevron.svg);
+}
+
+.answer {
+    /* display: none; */
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    width: 850px;
+    padding: 0 75px;
+
+    background: var(--expanded-background);
+    /* transform: translateX(60px) translateY(-60px); */
+    transform: translateX(60px);
+    position: relative;
+    z-index: 1;
 }
