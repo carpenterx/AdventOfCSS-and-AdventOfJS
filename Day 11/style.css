@@ -1,0 +1,56 @@
+:root {
+    --collapsed-background: #F0F0F0;
+    --expanded-background: #FFDD00;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.faqs {
+    display: flex;
+}
+
+.faq {
+    position: relative;
+    width: 1060px;
+}
+
+.question-mark {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    width: 70px;
+    height: 129px;
+}
+
+.question {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: block;
+    width: 850px;
+    padding: 24px;
+    border: 5px solid #000000;
+    border-left: 100px solid #000000;
+    background: #ffffff;
+}
+
+.answer {
+    position: absolute;
+    top: 50px;
+    left: 56px;
+    display: block;
+    width: 850px;
+    padding: 126px 85px 56px 70px;
+
+    background: var(--expanded-background);
+}
+
+.expander {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 70px;
+    right: 16px;
+}
