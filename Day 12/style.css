@@ -1,0 +1,100 @@
+:root {
+    --yellow-gold: #FFB800;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions {
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #000000;
+
+    margin-top: 136.39px;
+    margin-bottom: 75.61px;
+}
+
+.options {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+}
+
+.option {
+    box-sizing: border-box;
+    position: relative;
+    width: 315.35px;
+    height: 355px;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+
+.option:hover {
+    border: 10px solid var(--yellow-gold);
+}
+
+.rock {
+    width: 225.62px;
+    height: 290.9px;
+    margin-left: 33.58px;
+    margin-top: 24.01px;
+    pointer-events: none;
+}
+
+.paper {
+    width: 264.2px;
+    height: 252.89px;
+    margin-left: 25.57px;
+    margin-top: 30.02px;
+    pointer-events: none;
+}
+
+.scissors {
+    width: 235.67px;
+    height: 226.48px;
+    margin-left: 32.03px;
+    margin-top: 43.22px;
+    pointer-events: none;
+}
+
+.label {
+    position: absolute;
+    width: 316px;
+    height: 29px;
+    left: 0px;
+    top: 302.75px;
+
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+
+    color: #000000;
+    pointer-events: none;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/you-win.svg");
+    background-repeat: no-repeat;
+}
+
+.blend {
+    mix-blend-mode: multiply;
+}
