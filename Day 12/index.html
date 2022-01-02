@@ -15,26 +15,46 @@
 
 <body>
     <div id="game">
-        <!-- <div class="instructions">pick one</div>
-        <div class="options">
-            <div class="option" data-selection="rock">
-                <img class="rock" src="images/rock.png" alt="rock">
-                <div class="label">rock</div>
+        <div id="choose-screen">
+            <div class="instructions">pick one</div>
+            <div class="options">
+                <div class="option" data-selection="rock">
+                    <img class="rock" src="images/rock.png" alt="rock">
+                    <div class="label">rock</div>
+                </div>
+                <div class="option" data-selection="paper">
+                    <img class="paper" src="images/paper.png" alt="paper">
+                    <div class="label">paper</div>
+                </div>
+                <div class="option" data-selection="scissors">
+                    <img class="scissors" src="images/scissors.png" alt="scissors">
+                    <div class="label">scissors</div>
+                </div>
             </div>
-            <div class="option" data-selection="paper">
-                <img class="paper" src="images/paper.png" alt="paper">
-                <div class="label">paper</div>
-            </div>
-            <div class="option" data-selection="scissors">
-                <img class="scissors" src="images/scissors.png" alt="scissors">
-                <div class="label">scissors</div>
-            </div>
-        </div> -->
-        <div class="background">
-        <img class="blend" src="images/rock.png" alt="rock">
-        <img src="images/scissors.png" alt="scissors">
-
         </div>
+
+        <div id="result-screen" class="hide">
+            <div id="win-bg" class="background"></div>
+            <div id="lose-bg" class="background lose hide"></div>
+            <div class="images">
+                <div class="player-choice">
+                    <div id="player-win" class="message blend">you win</div>
+                    <div class="image">
+                        <img id="player-choice-img" class="blend" src="images/rock.png" alt="rock">
+                    </div>
+                </div>
+                <div class="computer-choice">
+                    <div id="computer-win" class="message blend hide">computer wins</div>
+                    <div class="image">
+                        <img id="computer-choice-img" class="blend flip" src="images/scissors.png" alt="scissors">
+                    </div>
+                </div>
+            </div>
+            <div id="play-again-btn" class="play-again blend">
+                <p>play again?</p>
+            </div>
+        </div>
+
     </div>
 </body>
 
