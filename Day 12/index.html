@@ -18,15 +18,15 @@
         <div id="choose-screen">
             <div class="instructions">pick one</div>
             <div class="options">
-                <div class="option" data-selection="rock">
+                <div id="rock-option" class="option" data-selection="rock">
                     <img class="rock" src="images/rock.png" alt="rock">
                     <div class="label">rock</div>
                 </div>
-                <div class="option" data-selection="paper">
+                <div id="paper-option" class="option" data-selection="paper">
                     <img class="paper" src="images/paper.png" alt="paper">
                     <div class="label">paper</div>
                 </div>
-                <div class="option" data-selection="scissors">
+                <div id="scissors-option" class="option" data-selection="scissors">
                     <img class="scissors" src="images/scissors.png" alt="scissors">
                     <div class="label">scissors</div>
                 </div>
@@ -35,7 +35,7 @@
 
         <div id="result-screen" class="hide">
             <div id="win-bg" class="background"></div>
-            <div id="lose-bg" class="background lose hide"></div>
+            <!-- <div id="lose-bg" class="background lose hide"></div> -->
             <div class="images">
                 <div class="player-choice">
                     <div id="player-win" class="message blend">you win</div>
