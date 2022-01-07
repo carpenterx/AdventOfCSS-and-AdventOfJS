@@ -27,6 +27,8 @@ lowercaseCheckbox.addEventListener("click", GeneratePassword)
 uppercaseCheckbox.addEventListener("click", GeneratePassword)
 similarCheckbox.addEventListener("click", GeneratePassword)
 
+UpdatePassword()
+
 function UpdatePassword() {
     rangeLabel.innerText = `${charactersRange.value} characters`
     GeneratePassword()
