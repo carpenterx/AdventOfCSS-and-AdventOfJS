@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="password-row">
+            <button id="refresh-btn">Refresh</button>
+            <div class="password" id="password">aV5`(^W*}VrCATWtaV5`(^W*}VrCATWt</div>
+            <div class="copy" id="copy">
+                <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M37.3147 2.83081H20.6332C18.1514 2.83081 16.1332 4.85131 16.1332 7.33081V38.8308C16.1332 41.3126 18.1514 43.3308 20.6332 43.3308H43.1332C45.6149 43.3308 47.6332 41.3126 47.6332 38.8308V13.1493L37.3147 2.83081ZM43.1354 38.8308H20.6332V7.33081H34.1332V16.3308H43.1332L43.1354 38.8308Z"
+                        fill="#7DA9AE" />
+                    <path
+                        d="M11.6332 11.8308H7.13318V47.8308C7.13318 50.3126 9.15143 52.3308 11.6332 52.3308H38.6332V47.8308H11.6332V11.8308Z"
+                        fill="#7DA9AE" />
+                </svg>
+            </div>
+        </div>
+        <div class="range-row">
+            <input type="range" name="" min="4" max="32" id="characters-range">
+            <label class="small-label" for="characters-range">12 characters</label>
+        </div>
+        <div class="checkbox-row">
+            <label for="symbols-checkbox">
+                <input type="checkbox" name="" id="symbols-checkbox">
+                <span class="bold-label">Include Symbols </span><span class="regular-label">(@#$%)</span>
+            </label>
+        </div>
+        <div class="checkbox-row">
+            <label for="numbers-checkbox">
+                <input type="checkbox" name="" id="numbers-checkbox">
+                <span class="bold-label">Include Numbers </span><span class="regular-label">(1234)</span>
+            </label>
+        </div>
+        <div class="checkbox-row">
+            <label for="lowercase-checkbox">
+                <input type="checkbox" name="" id="lowercase-checkbox">
+                <span class="bold-label">Include Lowercase Characters </span><span class="regular-label">(abcd)</span>
+            </label>
+        </div>
+        <div class="checkbox-row">
+            <label for="uppercase-checkbox">
+                <input type="checkbox" name="" id="uppercase-checkbox">
+                <span class="bold-label">Include Uppercase Characters </span><span class="regular-label">(ABCD)</span>
+            </label>
+        </div>
+        <div class="checkbox-row">
+            <label for="similar-checkbox">
+                <input type="checkbox" name="" id="similar-checkbox" checked>
+                <span class="bold-label">Exclude Similar Characters </span><span class="regular-label">(i, l, 1, L, o,
+                    0, O)</span>
+            </label>
+        </div>
+    </div>
+</body>
+
+</html>
