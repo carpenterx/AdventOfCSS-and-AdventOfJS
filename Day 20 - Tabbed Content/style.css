@@ -71,7 +71,8 @@ body {
 }
 
 .tab-content {
-    display: flex;
+    /* display: flex; */
+    display: none;
     gap: 34px;
 }
 
@@ -91,7 +92,6 @@ body {
     line-height: 50px;
 
     margin-bottom: 24px;
-    /* or 114% */
 
     color: #FFFFFF;
 }
@@ -102,8 +102,6 @@ body {
     font-weight: normal;
     font-size: 24px;
     line-height: 38px;
-
-    /* or 158% */
 
     color: #FFFFFF;
 }
@@ -136,7 +134,17 @@ body {
     background: url('images/arrow.svg') left top no-repeat;
 }
 
-.selected-arrow {
+.section-title input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* .section-radio {
+
+} */
+
+.checkmark {
     position: absolute;
 
     display: none;
@@ -149,44 +157,6 @@ body {
     transform: rotate(-45deg);
 }
 
-.selected .selected-arrow {
+.section-title input:checked ~ .checkmark {
     display: block;
-}
-
-/* .selected {
-    position: absolute;
-
-    left: 583px;
-    top: 278.29px;
-
-    display: flex;
-}
-
-.row1 {
-    display: flex;
-}
-
-.bg {
-    width: 32px;
-    height: 32px;
-    background: red;
-}
-
-.el1 {
-    width: 4px;
-    height: 32px;
-    background: green;
-}
-
-.el2 {
-    width: 4px;
-    height: 36px;
-    background: var(--yellow);
-    transform: rotate(90deg) translate(16px, 18px);
-} */
-
-/* .selected-bg {
-    width: 32px;
-    height: 32px;
-    background: #000000;
-} */
+  }

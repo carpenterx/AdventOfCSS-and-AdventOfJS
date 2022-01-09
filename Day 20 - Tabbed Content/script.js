@@ -1,17 +1,15 @@
 const tabs = document.querySelectorAll(".tab-content")
 const titles = document.querySelectorAll(".section-title")
 
-const startingIndex = 0
-
-
-for (let i = 1; i < tabs.length; i++) {
-    tabs[i].style.display = "none"
-}
+const startingIndex = 2
 
 for (let i = 0; i < titles.length; i++) {
-    titles[i].addEventListener("click", function () {ShowInfo(i) })
+    titles[i].addEventListener("click", function () { ShowInfo(i) })
 }
 
+let startingId = titles[startingIndex].getAttribute("for")
+let startingInput = document.getElementById(startingId)
+startingInput.checked = true
 ShowInfo(startingIndex)
 
 function ShowInfo(infoIndex) {
@@ -19,10 +17,8 @@ function ShowInfo(infoIndex) {
         if (i == infoIndex)
         {
             tabs[i].style.display = "flex"
-            titles[i].parentElement.classList.add("selected")
         } else {
             tabs[i].style.display = "none"
-            titles[i].parentElement.classList.remove("selected")
         }
     }
 }
