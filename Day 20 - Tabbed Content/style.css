@@ -1,0 +1,192 @@
+:root {
+    --yellow: #FBFF00;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar {
+    width: 500px;
+    flex-shrink: 0;
+    margin: 54px 0px 54px 71px;
+}
+
+.logo {
+    margin-bottom: 60px;
+}
+
+.sections {
+    display: flex;
+    gap: 20px;
+
+    flex-direction: column;
+}
+
+.section {
+    position: relative;
+}
+
+.section-number {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.12em;
+
+    color: var(--yellow);
+}
+
+.section-title {
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23.4345px;
+    line-height: 27px;
+
+    color: #FFFFFF;
+}
+
+.section-title:hover {
+    color: #8b5cfc;
+}
+
+.border {
+    width: 4px;
+    height: 100%;
+    background: var(--yellow);
+}
+
+.details {
+    margin-top: 160px;
+    margin-left: 54px;
+}
+
+.tab-content {
+    display: flex;
+    gap: 34px;
+}
+
+.details-image img {
+    border: 1px solid #FFFFFF;
+}
+
+.details-text {
+    width: 460px;
+}
+
+.details-title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 50px;
+
+    margin-bottom: 24px;
+    /* or 114% */
+
+    color: #FFFFFF;
+}
+
+.details-body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 38px;
+
+    /* or 158% */
+
+    color: #FFFFFF;
+}
+
+.details-link {
+    display: flex;
+}
+
+.details-link a:link {
+    text-decoration: none;
+
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.16em;
+    color: #FBFF00;
+}
+
+.details-link a:hover {
+    text-decoration: underline;
+}
+
+.details-link::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url('images/arrow.svg') left top no-repeat;
+}
+
+.selected-arrow {
+    position: absolute;
+
+    display: none;
+    right: -14px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
+    background: black;
+    box-shadow: 4px 4px var(--yellow);
+    transform: rotate(-45deg);
+}
+
+.selected .selected-arrow {
+    display: block;
+}
+
+/* .selected {
+    position: absolute;
+
+    left: 583px;
+    top: 278.29px;
+
+    display: flex;
+}
+
+.row1 {
+    display: flex;
+}
+
+.bg {
+    width: 32px;
+    height: 32px;
+    background: red;
+}
+
+.el1 {
+    width: 4px;
+    height: 32px;
+    background: green;
+}
+
+.el2 {
+    width: 4px;
+    height: 36px;
+    background: var(--yellow);
+    transform: rotate(90deg) translate(16px, 18px);
+} */
+
+/* .selected-bg {
+    width: 32px;
+    height: 32px;
+    background: #000000;
+} */
