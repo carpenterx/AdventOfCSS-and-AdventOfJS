@@ -1,0 +1,164 @@
+:root {
+    --primary: #1400FF;
+    --light-gray: #D4D4D4;
+    --dark-gray: #757575;
+    --red: #FF0000;
+    --green: #5FA12B;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* .container {
+    display: flex;
+    flex-direction: column;
+} */
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* width: 454px; */
+    gap: 20px;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56.1236px;
+    line-height: 68px;
+    letter-spacing: -0.01em;
+
+    color: #000000;
+}
+
+.float-container {
+    position: relative;
+    /* width: 454px; */
+    /* flex-grow: 1; */
+}
+
+input {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    /* identical to box height */
+    letter-spacing: -0.01em;
+
+    color: #000000;
+
+    border: 2px solid #D5D5D5;
+    border-radius: 4px;
+    padding: 8px 18px;
+    width: 450px;
+}
+
+input:focus {
+    border: 2px solid #1400FF;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+
+    padding: 8px 18px;
+    transition: all .2s ease-in-out;
+    letter-spacing: -0.01em;
+
+    color: var(--primary);
+}
+
+.label-top {
+    transform: translate(10px, -14px);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    background: white;
+    padding: 0 4px;
+}
+
+/* input[type=text], input[type=password] {
+    width: 454px;
+} */
+
+input[type=submit] {
+    background: var(--primary);
+    border-radius: 4px;
+    width: 489.2px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 18px 0;
+    /* padding: 18px; */
+
+    letter-spacing: -0.01em;
+
+    color: #FFFFFF;
+}
+
+.password-toggle {
+    background: url('images/show.svg') left top no-repeat;
+    background-size: 29.33px 18.67px;
+    width: 29.33px;
+    height: 18.67px;
+
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+.password-hide {
+    background: url('images/hide.svg') left top no-repeat;
+}
+
+.validation {
+    position: absolute;
+    top: 12px;
+    right: -282px;
+    display: flex;
+    gap: 6px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.validation-icon {
+    width: 24px;
+    height: 24px;
+    background: url('images/error.svg') left top no-repeat;
+}
+
+.success {
+    background: url('images/success.svg') left top no-repeat;
+}
+
+.validation-text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    /* line-height: 19px; */
+    width: 240px;
+    letter-spacing: -0.01em;
+
+    color: var(--red);
+}

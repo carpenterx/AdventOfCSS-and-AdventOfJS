@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Form Validator</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Signup</h3>
+        <form action="" name="formToValidate" id="formToValidate">
+            <div class="float-container">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="float-container">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+            </div>
+            <div class="float-container">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password">
+                <div class="password-toggle"></div>
+            </div>
+            <div class="float-container">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password">
+                <div class="password-toggle"></div>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
