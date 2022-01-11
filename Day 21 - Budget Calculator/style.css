@@ -1,0 +1,262 @@
+:root {
+    --primary: #51F129;
+    --gray-labels: #8E909D;
+    --input-background: #323645;
+    --add-panel: #282A37;
+    --positive-number: #4CA536;
+    --negative-number: #DF1414;
+}
+
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "input expenses"
+        "totals totals";
+}
+
+input[type=text] {
+    height: 56px;
+    background: var(--input-background);
+    border-radius: 16px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* top, right, bottom, and left  */
+    padding: 12px 18px 0px 18px;
+    border: none;
+
+    color: #FFFFFF;
+}
+
+input[type=text]:focus {
+    outline: 2px solid var(--primary);
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: var(--gray-labels);
+}
+
+.float-container {
+    position: relative;
+    width: 100%;
+    margin: 4px;
+}
+
+/* .float-container input {
+    width: 100%;
+} */
+
+label {
+    position: absolute;
+    left: 18px;
+    top: 4px;
+}
+
+.input {
+    grid-area: input;
+    background: var(--add-panel);
+
+    padding-left: 60px;
+    padding-top: 80px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+
+    /* align-self: center; */
+    /* justify-self: center; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 80px;
+    /* align-items: center; */
+    column-gap: 20px;
+    row-gap: 34px;
+    grid-template-rows: auto auto 80px;
+    grid-template-areas:
+        "input-title input-title ."
+        "input-budget input-budget ."
+        "input-expense input-amount input-add";
+}
+
+.input-title {
+    grid-area: input-title;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48.4255px;
+    line-height: 73px;
+    align-self: flex-end;
+
+    color: #FFFFFF;
+}
+
+.input-budget {
+    grid-area: input-budget;
+    align-self: center;
+}
+
+/* .input-budget input{
+    width: 466px;
+} */
+
+.input-expense {
+    grid-area: input-expense;
+    align-self: center;
+}
+
+.input-amount {
+    grid-area: input-amount;
+    align-self: center;
+}
+
+/* .input-expense input, .input-amount input {
+    width: 220px;
+} */
+
+.input-add {
+    grid-area: input-add;
+    align-self: center;
+    justify-self: center;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.expenses {
+    grid-area: expenses;
+    background: #000000;
+    padding-top: 110px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 110px;
+}
+
+.expenses-title {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: var(--primary);
+}
+
+.expenses-list {
+    overflow-y: auto;
+    height: 240px;
+}
+
+.expense {
+    display: grid;
+    grid-template-columns: 1fr 1fr 80px;
+    grid-template-areas: "expense-name expense-amount expense-delete";
+    padding: 8px 0;
+    margin-right: 8px;
+    border-bottom: 2px solid #313131;
+}
+
+.expense-name {
+    grid-area: expense-name;
+}
+
+.expense-amount {
+    grid-area: expense-amount;
+}
+
+.expense-name,
+.expense-amount {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+
+    color: #FFFFFF;
+}
+
+.expense-delete {
+    grid-area: expense-delete;
+    justify-self: end;
+    cursor: pointer;
+}
+
+.totals {
+    grid-area: totals;
+    background: #ffffff;
+
+    height: 100px;
+    display: grid;
+    padding: 0px 60px;
+    align-self: center;
+    /* justify-content: space-around; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "income-desc expenses-desc balance-desc"
+        "income-value expenses-value balance-value";
+}
+
+.income-desc {
+    grid-area: income-desc;
+}
+
+.expenses-desc {
+    grid-area: expenses-desc;
+}
+
+.balance-desc {
+    grid-area: balance-desc;
+}
+
+.income-value {
+    grid-area: income-value;
+}
+
+.expenses-value {
+    grid-area: expenses-value;
+}
+
+.balance-value {
+    grid-area: balance-value;
+}
+
+.income-desc,
+.expenses-desc,
+.balance-desc {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: var(--input-background);
+}
+
+.income-value,
+.expenses-value,
+.balance-value {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 81px;
+
+    color: #000000;
+}
+
+.balance-value {
+    color: var(--positive-number);
+}
+
+.negative {
+    color: var(--negative-number);
+}

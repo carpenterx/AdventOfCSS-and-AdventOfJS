@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Budget Calculator</title>
+</head>
+
+<body>
+    <div class="input">
+        <div class="input-title">Simpified Budget</div>
+        <div class="input-budget float-container">
+            <label for="budget">Budget Amount</label>
+            <input type="text" id="budget">
+        </div>
+        <div class="input-expense float-container">
+            <label for="expense">Expense</label>
+            <input type="text" id="expense">
+        </div>
+        <div class="input-amount float-container">
+            <label for="amount">Amount</label>
+            <input type="text" id="amount">
+        </div>
+        <div class="input-add" id="input-add">
+            <img src="images/plus.svg" alt="add expense">
+        </div>
+
+    </div>
+    <div class="expenses">
+        <div class="expenses-title">Expenses</div>
+        <div class="expenses-list" id="expenses-list"></div>
+    </div>
+    <div class="totals">
+        <div class="income-desc">Income</div>
+        <div class="income-value" id="income-value">$42,000.00</div>
+        <div class="expenses-desc">Expenses</div>
+        <div class="expenses-value" id="expenses-value">$42,000.00</div>
+        <div class="balance-desc">Balance</div>
+        <div class="balance-value" id="balance-value">$42,000.00</div>
+    </div>
+</body>
+
+</html>
