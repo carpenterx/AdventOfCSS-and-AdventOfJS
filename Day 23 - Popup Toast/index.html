@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Mono:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Popup Toast</title>
+</head>
+
+<body>
+    <div class="toast hide" id="toast">
+        <div class="close" id="close">
+            <img src="images/close.svg" alt="close">
+            <div class="close-text">Close</div>
+        </div>
+        <div class="cover">
+            <img src="images/cover.jpg" alt="cover">
+        </div>
+        <div class="popup-body">
+            <div class="popup-title">GET FREE<br>STUFF<br>IN YOUR INBOX</div>
+            <div class="popup-text">We try to include additional information and companion resources with each podcast
+                episode. Sign up now to be included in the fun.</div>
+            <div>
+                <label class="popup-label" for="email">EMAIL ADDRESS</label>
+            </div>
+            <div class="email-row">
+                <input class="email-input" type="text" id="email" value="your@email.com">
+                <img class="arrow" src="images/arrow.svg" alt="arrow">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
