@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Courier+Prime:wght@700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Credit Card Form</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="card" id="card">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="credit-card-number"></div>
+                    <div class="credit-card-name"></div>
+                    <div class="credit-card-expiration"></div>
+                </div>
+                <div class="back">
+                    <div class="credit-card-name-back"></div>
+                    <div class="credit-card-ccv-back"></div>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <div class="row-2">
+                <div class="input">
+                    <label for="card-number-input">Card Number</label>
+                    <input type="text" maxlength="19" id="card-number-input">
+                </div>
+                <div class="input">
+                    <label for="card-name-input">Card Name</label>
+                    <input type="text" id="card-name-input">
+                </div>
+            </div>
+            <div class="row-3">
+                <div class="input-1">
+                    <!-- <label for="expiration-month-input">Expiration Date</label> -->
+                    <label>Expiration Date</label>
+                    <!-- <input type="text" id="expiration-month-input" value="12"> -->
+                    <select name="expiration-month-input" id="expiration-month-input">
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                    <!-- <label for="expiration-year-input">Expiration Year</label> -->
+                    <!-- <input type="text" id="expiration-year-input" value="2022"> -->
+                    <select name="expiration-year-input" id="expiration-year-input">
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                        <option value="2033">2033</option>
+                        <option value="2034">2034</option>
+                    </select>
+                </div>
+                <div class="input-2">
+                    <label for="ccv-input">CCV</label>
+                    <input type="text" maxlength="4" id="ccv-input">
+                </div>
+            </div>
+            <div>
+                <button>Update</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+:root {
+    --background-color: #FBE6DB;
+    --submit-button: #7D193E;
+    --border-color: #E0E0E0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-300px);
+}
+
+.card {
+    transform: translateY(300px);
+    width: 861px;
+    height: 558px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-image: url('images/cc__visa--front.png');
+}
+
+.back {
+    background-image: url('images/cc__visa--back.png');
+    transform: rotateY(180deg);
+}
+
+.american .card-inner .front {
+    background-image: url('images/cc__american--front.png');
+}
+
+.american .card-inner .back {
+    background-image: url('images/cc__american--back.png');
+}
+
+.mastercard .card-inner .front {
+    background-image: url('images/cc__mastercard--front.png');
+}
+
+.mastercard .card-inner .back {
+    background-image: url('images/cc__mastercard--back.png');
+}
+
+.discover .card-inner .front {
+    background-image: url('images/cc__discover--front.png');
+}
+
+.discover .card-inner .back {
+    background-image: url('images/cc__discover--back.png');
+}
+
+.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.credit-card-name {
+    position: absolute;
+    top: 386px;
+    left: 154px;
+
+    text-transform: uppercase;
+    font-family: 'Courier Prime', monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 34px;
+    color: #ecebeb;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
+}
+
+.credit-card-number {
+    position: absolute;
+    top: 256px;
+    left: 154px;
+
+    font-family: 'Courier Prime', monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 47px;
+    color: #ecebeb;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
+}
+
+.credit-card-expiration {
+    position: absolute;
+    top: 336px;
+    left: 454px;
+
+    font-family: 'Courier Prime', monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 34px;
+    color: #ecebeb;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
+}
+
+.credit-card-name-back {
+    position: absolute;
+    top: 220px;
+    left: 154px;
+
+    text-transform: uppercase;
+    font-family: 'Beth Ellen', cursive;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 34px;
+    color: #000000;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.65);
+}
+
+.credit-card-ccv-back {
+    position: absolute;
+    top: 226px;
+    right: 140px;
+    /* left: 670px; */
+
+    font-family: 'Courier Prime', monospace;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 27px;
+
+    color: #000000;
+}
+
+label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #000000;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 20px 26px;
+}
+
+select {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #000000;
+    background: white;
+
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 20px 26px;
+
+    width: 220px;
+    text-align: center;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("images/arrow.svg");
+    background-repeat: no-repeat;
+    background-position-x: 94%;
+    background-position-y: 25px;
+}
+
+button {
+    padding: 10px;
+
+    background: #7D193E;
+    border-radius: 12px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #FEFEFE;
+    padding: 20px;
+    border: none;
+
+    width: 750px;
+}
+
+.form {
+    width: 880px;
+    background: #FFFFFF;
+
+    box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.25), 0px 0px 95px #F5C7BD;
+    border-radius: 30px;
+    padding: 280px 60px 60px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row-2,
+.row-3 {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.row-2 .input {
+    width: 360px;
+}
+
+.row-2 .input input {
+    width: 306px;
+}
+
+.input-1 {
+    width: 450px;
+}
+
+.input-2 {
+    width: 270px;
+}
+
+.input-2 input {
+    width: 216px;
+}
