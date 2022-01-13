@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Dynamic Table</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="table">
+            <div class="header">
+                <div class="header-row">
+                    <div class="id-cell sort-header bold-text" id="id">ID
+                        <div class="sort ascending" id="id-sort">
+                            <svg width="17" height="21" viewBox="0 0 17 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9706 8.48528L8.48529 0L9.29832e-06 8.48528H16.9706Z" fill="#363DAA" />
+                                <path d="M1.00136e-05 12.4853L8.48529 20.9706L16.9706 12.4853L1.00136e-05 12.4853Z"
+                                    fill="#DDE8F7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="name-cell sort-header bold-text" id="name">Name
+                        <div class="sort" id="name-sort">
+                            <svg width="17" height="21" viewBox="0 0 17 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9706 8.48528L8.48529 0L9.29832e-06 8.48528H16.9706Z" fill="#363DAA" />
+                                <path d="M1.00136e-05 12.4853L8.48529 20.9706L16.9706 12.4853L1.00136e-05 12.4853Z"
+                                    fill="#DDE8F7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="email-cell sort-header bold-text" id="email">Email Address
+                        <div class="sort" id="email-sort">
+                            <svg width="17" height="21" viewBox="0 0 17 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9706 8.48528L8.48529 0L9.29832e-06 8.48528H16.9706Z" fill="#363DAA" />
+                                <path d="M1.00136e-05 12.4853L8.48529 20.9706L16.9706 12.4853L1.00136e-05 12.4853Z"
+                                    fill="#DDE8F7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="job-cell sort-header bold-text" id="job">Job Title
+                        <div class="sort" id="job-sort">
+                            <svg width="17" height="21" viewBox="0 0 17 21" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.9706 8.48528L8.48529 0L9.29832e-06 8.48528H16.9706Z" fill="#363DAA" />
+                                <path d="M1.00136e-05 12.4853L8.48529 20.9706L16.9706 12.4853L1.00136e-05 12.4853Z"
+                                    fill="#DDE8F7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="icon-cell"></div>
+                </div>
+
+            </div>
+            <div class="rows">
+                <!-- <div class="row">
+                    <div class="id-cell id">1</div>
+                    <div class="name-cell name bold-text">Cameron Williamson</div>
+                    <div class="email-cell email">cameron.williamson@example.com</div>
+                    <div class="job-cell job">Software Developer</div>
+                    <div class="icon-cell icon"><img src="images/edit.svg" alt="edit"></div>
+                </div> -->
+            </div>
+            <div class="navigation">
+                <div class="navigation-row">
+                    <div class="results">10 results</div>
+                    <img id="previous-page" class="arrow" src="images/chevron--left.svg" alt="previous page">
+                    <div id="current-page-label">1</div>
+                    <div>of</div>
+                    <div id="total-pages-label">3</div>
+                    <img id="next-page" class="arrow" src="images/chevron--right.svg" alt="next page">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
